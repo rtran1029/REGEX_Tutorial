@@ -4,7 +4,7 @@ A basic tutorial on Regular Expressions.
 
 ## Summary
 
-In short, Regex stands for regular expressions. Regex utializes characters to define specific search patterns. For example, the following regex defines a search for and email address.
+In short, Regex stands for regular expressions. Regex utilizes characters to define specific search patterns. For example, the following regex defines a search for and email address.
 
 /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
@@ -26,7 +26,7 @@ In short, Regex stands for regular expressions. Regex utializes characters to de
 
 ## Regex Components
 -----
-
+-----
 ### **Anchors**  `^` and `$`
 
 These characters start and end a string respectively.  They indicate that whatever is between them is what will need to be matched in order to complete the search.  
@@ -56,7 +56,7 @@ In our example, these quantifiers indicate that we want to find an expression be
 
 Alternation is the term in regular expression that is actually a simple “OR”. It is denoted as this vertical character `|`
 
-our example does not have any OR alternation operators but here is an example i foound online.
+our example does not have any OR alternation operators but here is an example i found online.
 
 For example, the following expression will match either 'abc' or '123':
 
@@ -100,7 +100,7 @@ Parentheses `()` are used in regular expressions to group together different par
 
 ### **Bracket Expressions** `[]`
 
-These will include everything within the OR Operator brackets as a paramiter for the match/search. In our example these are included within the OR Operators.
+These will include everything within the OR Operator brackets as a parameter for the match/search. In our example these are included within the OR Operators.
 
 /^(`[a-z0-9_\.-]`+)@(`[\da-z\.-]`+)\.(`[a-z\.]`{2,6})$/
 
@@ -111,23 +111,48 @@ These will include everything within the OR Operator brackets as a paramiter for
 
 -----
 
-### **Greedy and Lazy Match**
+### **Greedy and Lazy Match** `+` vs `+?`
+
+With my limited understanding of it, what i can draw is that a greedy match will search every character withing the defined expression indiscriminantly and as many times as necessary until completed. Where as a lazy match will repeat the match a minimal amount of times to satisfy the search parameter.
 
 -----
 
 ### **Boundaries**
 
+Boundaries work by matching strings and their positioning within words and phrases. For instance, "`\b`" matches a word boundary between a word character and a non-word. the position of the word is also important to the the results of the word search here is a quick example below
+
+`\b`dog`\b` - would match *dog* in "hairy *dog*" but not in "hot*dog*" or "*dog*gy"<br>
+`\b`dog - would match *dog* in "*dog*gy" and in in "hairy *dog*" but not in "hot*dog*"<br>
+dog`\b` - would match *dog* in "hot*dog*" and in "hairy *dog*" but not in "*dog*gy"<br>
+
 -----
 
-### **Back-references**
+### **Back-references** `\{number}` or `\{word}` 
+
+Back-references allow the user to repeat a capturing group. It's used inside a regex by inlining its group number preceded by a single backslash. within our example
+
+/^([a-z0-9_\.-]+)@`([\da-z\.-]+)`\.([a-z\.]{2,6})$/
+
+if i wanted to reference just the second capturing group i would utilize `\2`<br>
+this would reference this group from the example above `([\da-z\.-]+)`<br>
 
 -----
 
 ### **Look-ahead and Look-behind**
 
+Look-ahead and look-behind matches fall under the "look-around" patterns. Look-around lets you match a group before (look-behind) or after (look-ahead) your main pattern without including it in the result.
+
 -----
+
+-----
+
+
+
 
 ## **Author**
 
+Richard Tran made this tutorial as a part of completion requirements for the GT-Bootcamp. Thank you for your time and I hope some of this can be helpful to your development endeavors.
+
+https://github.com/rtran1029/REGEX_Tutorial
+
 -----
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
