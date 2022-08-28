@@ -54,6 +54,15 @@ In our example, these quantifiers indicate that we want to find an expression be
 -----
 
 ### **OR Operator**
+`[]`
+
+These will include everything within the OR Operator brackets as a paramiter for the match/search. In our example these are included within the OR Operators.
+
+/^(`[a-z0-9_\.-]`+)@(`[\da-z\.-]`+)\.(`[a-z\.]`{2,6})$/
+
+`[a-z0-9_\.-]` - Matches any lowercase letters, numbers 0-9, underscores, periods or dashes<br>
+`[\da-z\.-]` - Matches any single digit, lowercase letters, periods or dashes<br>
+`[a-z\.]` - matches any lowercase letters and periods<br>
 
 -----
 
