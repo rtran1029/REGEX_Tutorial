@@ -25,34 +25,71 @@ In short, Regex stands for regular expressions. Regex utializes characters to de
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+-----
 
-### Anchors  
-
+### **Anchors**  
 `^` and `$`
+
 These characters start and end a string respectively.  They indicate that whatever is between them is what will need to be matched in order to complete the search.  
 
 /`^`([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})`$`/
 
-### Quantifiers
+-----
 
-### OR Operator
+### **Quantifiers**
+`+`
 
-### Character Classes
+This "`+`" will perform a match of characters defined to the left of the quantifier.
 
-### Flags
+([a-z0-9_\.-]`+`)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
-### Grouping and Capturing
+Here it matches any combination of lowercase characters, numbers, periods, underscores or dashes.  
 
-### Bracket Expressions
+`{x, y}`
 
-### Greedy and Lazy Match
+In our example, these quantifiers indicate that we want to find an expression between 2 and 6 in length.
 
-### Boundaries
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]`{2,6}`)$/
 
-### Back-references
+-----
 
-### Look-ahead and Look-behind
+### **OR Operator**
 
-## Author
+-----
 
+### **Character Classes**
+
+-----
+
+### **Flags**
+
+-----
+
+### **Grouping and Capturing**
+
+-----
+
+### **Bracket Expressions**
+
+-----
+
+### **Greedy and Lazy Match**
+
+-----
+
+### **Boundaries**
+
+-----
+
+### **Back-references**
+
+-----
+
+### **Look-ahead and Look-behind**
+
+-----
+
+## **Author**
+
+-----
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
