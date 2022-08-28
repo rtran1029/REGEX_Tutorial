@@ -155,4 +155,6 @@ Richard Tran made this tutorial as a part of completion requirements for the GT-
 
 https://github.com/rtran1029/REGEX_Tutorial
 
+https://gist.github.com/rtran1029/bbbf2f4f7d6dcfc663d7719d9ee4d280
+
 -----
