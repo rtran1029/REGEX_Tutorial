@@ -52,15 +52,15 @@ In our example, these quantifiers indicate that we want to find an expression be
 
 -----
 
-### **OR Operator** `[]`
+### **OR Operator** `(|or|)`
 
-These will include everything within the OR Operator brackets as a paramiter for the match/search. In our example these are included within the OR Operators.
+Alternation is the term in regular expression that is actually a simple “OR”. It is denoted as this vertical character `|`
 
-/^(`[a-z0-9_\.-]`+)@(`[\da-z\.-]`+)\.(`[a-z\.]`{2,6})$/
+our example does not have any OR alternation operators but here is an example i foound online.
 
-`[a-z0-9_\.-]` - Matches any lowercase letters, numbers 0-9, underscores, periods or dashes<br>
-`[\da-z\.-]` - Matches any single digit, lowercase letters, periods or dashes<br>
-`[a-z\.]` - matches any lowercase letters and periods<br>
+For example, the following expression will match either 'abc' or '123':
+
+/abc`|`123/
 
 -----
 
@@ -98,7 +98,16 @@ Parentheses `()` are used in regular expressions to group together different par
 
 -----
 
-### **Bracket Expressions**
+### **Bracket Expressions** `[]`
+
+These will include everything within the OR Operator brackets as a paramiter for the match/search. In our example these are included within the OR Operators.
+
+/^(`[a-z0-9_\.-]`+)@(`[\da-z\.-]`+)\.(`[a-z\.]`{2,6})$/
+
+`[a-z0-9_\.-]` - Matches any lowercase letters, numbers 0-9, underscores, periods or dashes<br>
+`[\da-z\.-]` - Matches any single digit, lowercase letters, periods or dashes<br>
+`[a-z\.]` - matches any lowercase letters and periods<br>
+
 
 -----
 
