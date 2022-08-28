@@ -1,10 +1,14 @@
 # REGEX_Tutorial
 
-Introductory paragraph (replace this with your text)
+A basic tutorial on Regular Expressions.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+In short, Regex stands for regular expressions. Regex utializes characters to define specific search patterns. For example, the following regex defines a search for and email address.
+
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+
+
 
 ## Table of Contents
 
@@ -22,7 +26,12 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Regex Components
 
-### Anchors
+### Anchors  
+
+`^` and `$`
+These characters start and end a string respectively.  They indicate that whatever is between them is what will need to be matched in order to complete the search.  
+
+/`^`([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})`$`/
 
 ### Quantifiers
 
