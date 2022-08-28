@@ -27,8 +27,7 @@ In short, Regex stands for regular expressions. Regex utializes characters to de
 ## Regex Components
 -----
 
-### **Anchors**  
-`^` and `$`
+### **Anchors**  `^` and `$`
 
 These characters start and end a string respectively.  They indicate that whatever is between them is what will need to be matched in order to complete the search.  
 
@@ -36,7 +35,7 @@ These characters start and end a string respectively.  They indicate that whatev
 
 -----
 
-### **Quantifiers**
+### **Quantifiers** `+` and `{x, y}`
 `+`
 
 This "`+`" will perform a match of characters defined to the left of the quantifier.
@@ -53,8 +52,7 @@ In our example, these quantifiers indicate that we want to find an expression be
 
 -----
 
-### **OR Operator**
-`[]`
+### **OR Operator** `[]`
 
 These will include everything within the OR Operator brackets as a paramiter for the match/search. In our example these are included within the OR Operators.
 
@@ -66,15 +64,37 @@ These will include everything within the OR Operator brackets as a paramiter for
 
 -----
 
-### **Character Classes**
+### **Character Classes** `\.` and `\d`
+`\.`
+
+These will match any periods given in an expression:
+
+/^([a-z0-9_`\.`-]+)@([\da-z`\.`-]+)\.([a-z`\.`]`{2,6})$/
+
+`\d`
+These will match any single characters that are digits from 0-9:
+
+/^([a-z0-9_\.-]+)@([`\d`a-z\.-]+)\.([a-z\.]{2,6})$/
 
 -----
 
-### **Flags**
+### **Flags** `//`
+
+Flags are the forward slashes // that begin and end the regex:
+
+`/`^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$`/`
 
 -----
 
-### **Grouping and Capturing**
+### **Grouping and Capturing** `()`
+
+Parentheses `()` are used in regular expressions to group together different parts of the search. In our Regex expression there are 3 grouped sections:
+
+/^`(`[a-z0-9_.-]+`)`@`(`[\da-z.-]+`)`.`(`[a-z.]{2,6}`)`$/
+
+`([a-z0-9_.-]+)` - characters before the @ sign in an email address<br>
+`([\da-z.-]+)` - characters after the @ sign in an email address<br>
+`([a-z.]{2,6})` - the domain after the dot . at the end of the email address<br>
 
 -----
 
